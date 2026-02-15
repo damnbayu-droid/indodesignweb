@@ -75,11 +75,15 @@ export default function HeroSpline() {
                             exit={{ scale: 0.9, opacity: 0, y: 20 }}
                             transition={{ type: "spring", duration: 0.5 }}
                             className="relative w-full max-w-4xl bg-[#0a0a0a] border border-white/10 rounded-2xl shadow-2xl overflow-hidden flex flex-col md:flex-row max-h-[90vh]"
+                            role="dialog"
+                            aria-modal="true"
+                            aria-labelledby="modal-title"
                         >
                             {/* Close Button */}
                             <button
                                 onClick={() => setIsModalOpen(false)}
                                 className="absolute top-4 right-4 z-20 p-2 rounded-full bg-black/50 text-gray-400 hover:text-white border border-white/10 hover:border-white/30 transition-all"
+                                aria-label="Close consultation modal"
                             >
                                 <X className="w-5 h-5" />
                             </button>
@@ -88,7 +92,7 @@ export default function HeroSpline() {
                             <div className="hidden md:flex w-2/5 relative bg-gradient-to-br from-[#111] to-black border-r border-white/5 p-8 flex-col justify-between overflow-hidden">
                                 <div className="absolute top-0 left-0 w-full h-full bg-neon-blue/5 opacity-50" />
                                 <div className="relative z-10">
-                                    <h3 className="text-2xl font-bold text-white mb-2">
+                                    <h3 id="modal-title" className="text-2xl font-bold text-white mb-2">
                                         Mulai Proyek Anda
                                     </h3>
                                     <p className="text-gray-400 text-sm">
@@ -96,7 +100,7 @@ export default function HeroSpline() {
                                     </p>
                                 </div>
 
-                                <div className="relative z-10 mt-8 transform hover:scale-105 transition-transform duration-500">
+                                <div className="relative z-10 mt-8 transform hover:scale-105 transition-transform duration-500" aria-hidden="true">
                                     <CodeWindow
                                         className="shadow-2xl border-neon-blue/20"
                                         filename="Success.tsx"

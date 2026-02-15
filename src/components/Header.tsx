@@ -55,9 +55,10 @@ export default function Header() {
             <input
               type="text"
               placeholder="Search website services..."
+              aria-label="Search website services"
               className="w-full bg-white/5 border border-white/10 rounded-full py-2.5 pl-10 pr-4 text-sm text-white placeholder-white/40 focus:outline-none focus:border-neon-blue/50 focus:bg-white/10 transition-all"
             />
-            <Search className="absolute left-3.5 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white/40 group-focus-within:text-neon-blue transition-colors" />
+            <Search className="absolute left-3.5 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white/40 group-focus-within:text-neon-blue transition-colors" aria-hidden="true" />
           </div>
         </div>
 
@@ -80,6 +81,8 @@ export default function Header() {
           <button
             className="md:hidden p-2 text-gray-300"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle mobile menu"
+            aria-expanded={isMobileMenuOpen}
           >
             <Menu className="w-6 h-6" />
           </button>
@@ -97,6 +100,7 @@ export default function Header() {
           <input
             type="text"
             placeholder="Search services..."
+            aria-label="Search services"
             className="w-full bg-white/5 border border-white/10 rounded-full py-2 pl-10 pr-4 text-sm text-white"
           />
           <Search className="absolute left-3.5 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white/40" />
