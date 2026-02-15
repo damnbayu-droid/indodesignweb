@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Search, ShoppingCart, Power, Menu } from "lucide-react";
+import { Search, Power, Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export default function Header() {
@@ -63,11 +63,7 @@ export default function Header() {
 
         {/* Right Icons */}
         <div className="flex items-center gap-4 md:gap-6">
-          {/* Cart */}
-          <button className="relative group p-2 rounded-full hover:bg-white/5 transition-colors">
-            <ShoppingCart className="w-5 h-5 text-gray-300 group-hover:text-neon-blue transition-colors" />
-            <span className="absolute top-1 right-1 w-2 h-2 bg-neon-red rounded-full"></span>
-          </button>
+
 
           {/* WhatsApp */}
           <Link

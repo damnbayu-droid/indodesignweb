@@ -1,7 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { Star } from "lucide-react";
+import { BrowserWindow } from "@/components/ui/browser-window";
+import { CodeWindow } from "@/components/ui/code-window";
 
 export default function Testimonials() {
   return (
@@ -18,37 +19,32 @@ export default function Testimonials() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Gallery – visual tetap */}
-          <div className="grid grid-cols-2 gap-4">
-            <div className="relative h-64 rounded-2xl overflow-hidden group">
-              <Image
-                src="/hero-bg.png"
-                alt="Website project 1"
-                fill
-                className="object-cover group-hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-            <div className="relative h-64 rounded-2xl overflow-hidden translate-y-8 group">
-              <Image
-                src="/exploded-pc.png"
-                alt="Website project 2"
-                fill
-                className="object-cover group-hover:scale-110 transition-transform duration-500 bg-[#111]"
-              />
-            </div>
-            <div className="relative h-64 rounded-2xl overflow-hidden -translate-y-8 group">
-              <Image
-                src="/exploded-pc.png"
-                alt="Website project 3"
-                fill
-                className="object-cover group-hover:scale-110 transition-transform duration-500 bg-[#151515]"
-              />
-            </div>
-            <div className="relative h-64 rounded-2xl overflow-hidden group">
-              <Image
-                src="/hero-bg.png"
-                alt="Website project 4"
-                fill
-                className="object-cover group-hover:scale-110 transition-transform duration-500"
+          {/* Visual – Web Design & Dev Representation */}
+          <div className="relative">
+            {/* Abstract Background Glow */}
+            <div className="absolute inset-0 bg-neon-blue/20 blur-[100px] rounded-full opacity-20" />
+
+            <div className="relative z-10 w-full">
+              <BrowserWindow className="w-full shadow-2xl bg-[#111]" url="indodesign.website">
+                <div className="p-6 grid grid-cols-3 gap-4 opacity-50">
+                  <div className="col-span-2 h-40 bg-white/5 rounded-lg border border-white/5" />
+                  <div className="col-span-1 h-40 bg-white/10 rounded-lg border border-white/5" />
+                  <div className="col-span-3 h-24 bg-white/5 rounded-lg border border-white/5" />
+                </div>
+              </BrowserWindow>
+
+              <CodeWindow
+                className="absolute -bottom-10 -right-4 w-[90%] md:w-[80%] shadow-[0_10px_50px_rgba(0,0,0,0.8)] border-neon-blue/30"
+                filename="ModernWebsite.tsx"
+                code={`export default function Website() {
+  return (
+    <Features>
+      <FastLoading />
+      <MobileFriendly />
+      <SEOOptimized />
+    </Features>
+  );
+}`}
               />
             </div>
           </div>

@@ -16,23 +16,75 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Jasa Pembuatan Website Profesional | IndoDesign.website",
+  metadataBase: new URL("https://indodesign.website"),
+  title: {
+    default: "Jasa Pembuatan Website Profesional | IndoDesign.website",
+    template: "%s | IndoDesign.website",
+  },
   description:
-    "IndoDesign.website adalah jasa pembuatan website profesional di Indonesia. Desain modern, SEO-ready, fast loading, dan mobile friendly untuk bisnis.",
+    "IndoDesign.website adalah jasa pembuatan website profesional terbaik di Indonesia. Kami melayani pembuatan website bisnis, company profile, toko online, dan custom web app dengan desain modern, SEO-ready, dan fast loading.",
   keywords: [
     "jasa pembuatan website",
+    "jasa website profesional",
+    "jasa buat website",
     "web design indonesia",
-    "website bisnis",
-    "jasa web profesional",
-    "seo website",
+    "jasa pembuatan website toko online",
+    "jasa pembuatan website company profile",
+    "jasa seo website",
+    "jasa website murah berkualitas",
+    "bikin website bisnis",
   ],
+  authors: [{ name: "IndoDesign Team", url: "https://indodesign.website" }],
+  creator: "IndoDesign Team",
+  publisher: "IndoDesign.website",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   openGraph: {
-    title: "IndoDesign.website | Jasa Pembuatan Website Profesional",
+    title: "Jasa Pembuatan Website Profesional | IndoDesign.website",
     description:
-      "Bangun website bisnis profesional dengan desain modern, SEO-ready, dan performa tinggi.",
+      "Bangun identitas digital bisnis Anda dengan website profesional, modern, dan SEO-friendly. Konsultasi gratis sekarang!",
     url: "https://indodesign.website",
     siteName: "IndoDesign.website",
+    locale: "id_ID",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Jasa Pembuatan Website Profesional - IndoDesign",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Jasa Pembuatan Website Profesional | IndoDesign.website",
+    description:
+      "Jasa pembuatan website profesional, cepat, dan berkualitas. Tingkatkan omset bisnis Anda dengan website yang menarik dan SEO-ready.",
+    images: ["/og-image.png"],
+    creator: "@indodesignweb",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: "https://indodesign.website",
+  },
+  icons: {
+    icon: "/Logo.webp",
+    shortcut: "/Logo.webp",
+    apple: "/logo.webp", // Assuming logo.webp can serve as apple icon or needs resizing
   },
 };
 

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
+import { CodeWindow } from "@/components/ui/code-window";
 import { Zap, ArrowRight, X } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -27,11 +27,10 @@ export default function PCBuilderCTA() {
 
       {/* CONTENT */}
       <div
-        className={`container mx-auto px-4 relative z-10 flex flex-col md:flex-row items-center gap-16 ${
-          open ? "blur-sm pointer-events-none" : ""
-        }`}
+        className={`container mx-auto px-4 relative z-10 flex flex-col md:flex-row items-center gap-16 ${open ? "blur-sm pointer-events-none" : ""
+          }`}
       >
-        {/* IMAGE */}
+        {/* VISUAL - Code Representation */}
         <div className="w-full md:w-1/2 relative">
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -39,13 +38,28 @@ export default function PCBuilderCTA() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <Image
-              src="/exploded-pc.png"
-              alt="Web Design Illustration"
-              width={800}
-              height={800}
-              className="w-full h-auto object-contain"
-            />
+            <div className="relative">
+              <div className="absolute -inset-1 bg-gradient-to-r from-neon-blue to-neon-purple opacity-20 blur-xl" />
+              <CodeWindow
+                className="relative z-10 w-full shadow-2xl bg-[#0a0a0a] border-white/10"
+                filename="BusinessGrowth.ts"
+                code={`const business = {
+  name: "Your Business",
+  status: "Online",
+  growth: "Accelerated",
+  
+  boostSales: function() {
+    return this.website
+      .optimize()
+      .attractCustomers()
+      .generateRevenue();
+  }
+};
+
+// Start growing now
+business.boostSales();`}
+              />
+            </div>
           </motion.div>
         </div>
 

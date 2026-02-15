@@ -20,7 +20,7 @@ export default function Footer() {
             </Link>
 
             <p className="text-sm leading-relaxed">
-              IndoDesign.website adalah jasa pembuatan website profesional di
+              Kotabubnan.shop by IndoDesign.website adalah jasa pembuatan website profesional di
               Indonesia. Fokus pada desain modern, performa tinggi, SEO-ready,
               dan konversi bisnis.
             </p>
@@ -111,7 +111,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
           <p>
-            IndoDesign.website by Bali.Enterprises | All Rights Reserved
+            Kotabunan.shop by IndoDesign.website | All Rights Reserved
           </p>
 
           <div className="flex flex-wrap gap-4 text-xs">
@@ -121,14 +121,14 @@ export default function Footer() {
             <a href="https://indonesianvisas.com" className="hover:text-white">
               indonesianvisas.com
             </a>
-            <a href="https://visas.agency" className="hover:text-white">
-              visas.agency
+            <a href="https://balihelp.id" className="hover:text-white">
+              balihelp.id
             </a>
-            <a href="https://balivisas.agency" className="hover:text-white">
-              balivisas.agency
+            <a href="https://indodesign.website" className="hover:text-white">
+              indodesign.website
             </a>
-            <a href="https://visa.biz.id" className="hover:text-white">
-              visa.biz.id
+            <a href="https://tropictech.online" className="hover:text-white">
+              tropictech.online
             </a>
             <a href="https://mybisnis.app" className="hover:text-white">
               mybisnis.app
